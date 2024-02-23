@@ -3,8 +3,10 @@ package jeublackjack;
 
 import java.util.Scanner;
 
+
 public class JeuBLACKJACK {
-     private PaquetCartes paquet;
+
+    private PaquetCartes paquet;
     private Joueur joueur;
     private Croupier croupier;
     
@@ -89,13 +91,13 @@ public class JeuBLACKJACK {
         
         while(true){
             JeuBLACKJACK jeu = new JeuBLACKJACK("Amine",400,17);
-            System.out.println("================  You are in the game  ================");
+            System.out.println("======================================");
             System.out.println();
-            System.out.println("Bonjour, "+jeu.joueur.getUsername()+" Ready? -_- !");
+            System.out.println("Bonjour, "+jeu.joueur.getUsername()+" Ready?  !");
             System.out.println();
-            System.out.println("-- Pablo Table --");
-            System.out.println("1- Commencer à jouer");
-            System.out.println("2- je le consulter mon solde  ");
+            System.out.println("-- BLACKJACK --");
+            System.out.println("1- Commencer le jeu");
+            System.out.println("2- consulter mon solde  ");
             System.out.println();
             System.out.println("Entrez votre choix : ");
 

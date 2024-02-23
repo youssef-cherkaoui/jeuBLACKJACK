@@ -1,7 +1,31 @@
 
 package jeublackjack;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Carte {
+            
+     try {
+            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/namedatabase", "root", "pass");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM black.carte");
+             while (rs.next()) {
+                String idcarte = rs.getString("id_Carte");
+                System.out.print("ID " + idcarte);
+                
+            }
+            Main Main = new Main();
+            Main.handle();
+        } catch (SQLException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+        
     private Valeur valeur;
     private Types type;
     

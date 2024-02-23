@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Main implements MainInterface{
-     private final List<Carte> cartes;
+
+public class Main implements MainInterface {
+       
+        private List<Carte> cartes;
         private int valeurTotal;
         private int nbCartes;
     
@@ -14,15 +16,14 @@ public class Main implements MainInterface{
           this.cartes = new ArrayList<>();
           this.nbCartes=0;
         }
-
         
-     @Override
+        @Override
         public void ajouterCarte(Carte carte){
             cartes.add(carte);
             this.nbCartes++;
         }
 
-     @Override
+        @Override
         public int calculerValeurMain(){
             int nombreAs=0;
             valeurTotal = 0;
@@ -51,5 +52,5 @@ public class Main implements MainInterface{
 
         public int getValeurTotal() {
             return valeurTotal;
-        }
+        }  
 }
